@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "LABA7_OOP": {
+      "commandName": "Project",
+      "commandLineArgs": "console"
+    }
+  }
+}
