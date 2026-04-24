@@ -44,7 +44,10 @@ namespace LABA7_OOP
 
         public void DisplayShopInfo(InternetShop shop)
         {
-            if (shop == null) return;
+            if (shop == null)
+            {
+                return;
+            }
             txtDisplayInfo.Text = shop.ToString();
         }
 
@@ -55,16 +58,25 @@ namespace LABA7_OOP
             {
                 string display = $"{i + 1}. {shops[i].Name}";
                 if (shops[i] == currentShop)
+                {
                     display += " (текущий)";
+                }
                 cmbObjectsList.Items.Add(display);
             }
             if (currentShop != null)
+            {
                 cmbObjectsList.SelectedIndex = shops.IndexOf(currentShop);
+            }
             else if (cmbObjectsList.Items.Count > 0)
+            {
                 cmbObjectsList.SelectedIndex = -1;
-
+            }
             lblObjectCount.Text = $"Создано объектов: {shops.Count}";
             lblCurrentObject.Text = currentShop != null ? $"Текущий объект: {currentShop.Name}" : "Текущий объект: не выбран";
+            if (currentShop == null)
+            {
+                txtDisplayInfo.Clear();
+            }
         }
 
         public void ShowMessage(string text, bool isError = false)

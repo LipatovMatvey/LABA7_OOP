@@ -70,12 +70,13 @@ namespace LABA7_OOP.Model
         {
             if (index >= 0 && index < shops.Count)
             {
+                bool isCurrentDeleted = (shops[index] == currentShop);
                 shops.RemoveAt(index);
                 if (shops.Count == 0)
                 {
                     currentShop = null;
                 }
-                else if (currentShop != null && index <= shops.IndexOf(currentShop))
+                else if (isCurrentDeleted)
                 {
                     currentShop = shops[0];
                 }
