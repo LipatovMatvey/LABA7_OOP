@@ -1,9 +1,16 @@
-﻿namespace LABA7_OOP
+﻿namespace MVC
 {
     partial class Form1
     {
+        /// <summary>
+        ///  Required designer variable.
+        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
+        /// <summary>
+        ///  Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -13,6 +20,12 @@
             base.Dispose(disposing);
         }
 
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        ///  Required method for Designer support - do not modify
+        ///  the contents of this method with the code editor.
+        /// </summary>
         private void InitializeComponent()
         {
             groupBoxObjects = new GroupBox();
@@ -39,6 +52,7 @@
             numericUpDown4 = new NumericUpDown();
             lblObjectCount = new Label();
             panel1 = new Panel();
+            label11 = new Label();
             label10 = new Label();
             label2 = new Label();
             label1 = new Label();
@@ -65,10 +79,10 @@
             groupBoxObjects.Controls.Add(cmbObjectsList);
             groupBoxObjects.Controls.Add(btnDeleteObject);
             groupBoxObjects.Font = new Font("Trebuchet MS", 9.75F);
-            groupBoxObjects.Location = new Point(18, 487);
+            groupBoxObjects.Location = new Point(12, 529);
             groupBoxObjects.Name = "groupBoxObjects";
-            groupBoxObjects.Size = new Size(335, 86);
-            groupBoxObjects.TabIndex = 41;
+            groupBoxObjects.Size = new Size(335, 85);
+            groupBoxObjects.TabIndex = 46;
             groupBoxObjects.TabStop = false;
             groupBoxObjects.Text = "Управление объектами";
             // 
@@ -78,7 +92,7 @@
             lblCurrentObject.AutoSize = true;
             lblCurrentObject.Font = new Font("Trebuchet MS", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
             lblCurrentObject.ForeColor = Color.Black;
-            lblCurrentObject.Location = new Point(6, 22);
+            lblCurrentObject.Location = new Point(14, 22);
             lblCurrentObject.Name = "lblCurrentObject";
             lblCurrentObject.Size = new Size(232, 23);
             lblCurrentObject.TabIndex = 0;
@@ -90,9 +104,9 @@
             cmbObjectsList.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbObjectsList.Font = new Font("Trebuchet MS", 9.75F);
             cmbObjectsList.FormattingEnabled = true;
-            cmbObjectsList.Location = new Point(6, 46);
+            cmbObjectsList.Location = new Point(14, 46);
             cmbObjectsList.Name = "cmbObjectsList";
-            cmbObjectsList.Size = new Size(190, 30);
+            cmbObjectsList.Size = new Size(146, 30);
             cmbObjectsList.TabIndex = 1;
             // 
             // btnDeleteObject
@@ -100,12 +114,13 @@
             btnDeleteObject.Anchor = AnchorStyles.None;
             btnDeleteObject.BackColor = Color.White;
             btnDeleteObject.Font = new Font("Trebuchet MS", 9.75F);
-            btnDeleteObject.Location = new Point(207, 46);
+            btnDeleteObject.Location = new Point(186, 46);
             btnDeleteObject.Name = "btnDeleteObject";
-            btnDeleteObject.Size = new Size(122, 32);
+            btnDeleteObject.Size = new Size(122, 28);
             btnDeleteObject.TabIndex = 3;
             btnDeleteObject.Text = "Удалить";
             btnDeleteObject.UseVisualStyleBackColor = false;
+            btnDeleteObject.Click += btnDeleteObject_Click;
             // 
             // groupBoxStatus
             // 
@@ -113,10 +128,10 @@
             groupBoxStatus.Controls.Add(resetButton);
             groupBoxStatus.Controls.Add(button1);
             groupBoxStatus.Font = new Font("Trebuchet MS", 9.75F);
-            groupBoxStatus.Location = new Point(18, 417);
+            groupBoxStatus.Location = new Point(12, 454);
             groupBoxStatus.Name = "groupBoxStatus";
-            groupBoxStatus.Size = new Size(335, 64);
-            groupBoxStatus.TabIndex = 40;
+            groupBoxStatus.Size = new Size(335, 69);
+            groupBoxStatus.TabIndex = 45;
             groupBoxStatus.TabStop = false;
             groupBoxStatus.Text = "Управление";
             // 
@@ -124,24 +139,26 @@
             // 
             resetButton.Anchor = AnchorStyles.None;
             resetButton.Font = new Font("Trebuchet MS", 9.75F);
-            resetButton.Location = new Point(177, 25);
+            resetButton.Location = new Point(174, 29);
             resetButton.Margin = new Padding(3, 4, 3, 4);
             resetButton.Name = "resetButton";
             resetButton.Size = new Size(134, 32);
             resetButton.TabIndex = 17;
             resetButton.Text = "Сбросить поля";
             resetButton.UseVisualStyleBackColor = true;
+            resetButton.Click += resetButton_Click;
             // 
             // button1
             // 
             button1.Anchor = AnchorStyles.None;
             button1.Font = new Font("Trebuchet MS", 9.75F);
-            button1.Location = new Point(35, 25);
+            button1.Location = new Point(32, 29);
             button1.Name = "button1";
             button1.Size = new Size(134, 32);
             button1.TabIndex = 2;
             button1.Text = "Создать объект";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // groupBoxInput
             // 
@@ -160,10 +177,10 @@
             groupBoxInput.Controls.Add(label8);
             groupBoxInput.Controls.Add(numericUpDown4);
             groupBoxInput.Font = new Font("Trebuchet MS", 9.75F);
-            groupBoxInput.Location = new Point(18, 100);
+            groupBoxInput.Location = new Point(12, 137);
             groupBoxInput.Name = "groupBoxInput";
             groupBoxInput.Size = new Size(335, 311);
-            groupBoxInput.TabIndex = 39;
+            groupBoxInput.TabIndex = 44;
             groupBoxInput.TabStop = false;
             groupBoxInput.Text = "Ввод данных";
             // 
@@ -319,24 +336,37 @@
             lblObjectCount.AutoSize = true;
             lblObjectCount.Font = new Font("Trebuchet MS", 9.75F);
             lblObjectCount.ForeColor = Color.Blue;
-            lblObjectCount.Location = new Point(18, 79);
+            lblObjectCount.Location = new Point(12, 111);
             lblObjectCount.Name = "lblObjectCount";
             lblObjectCount.Size = new Size(172, 23);
-            lblObjectCount.TabIndex = 38;
+            lblObjectCount.TabIndex = 43;
             lblObjectCount.Text = "Создано объектов: 0";
             // 
             // panel1
             // 
             panel1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel1.BackColor = SystemColors.Highlight;
+            panel1.Controls.Add(label11);
             panel1.Controls.Add(label10);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(label1);
             panel1.Font = new Font("Trebuchet MS", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            panel1.Location = new Point(0, 3);
+            panel1.Location = new Point(-34, -21);
             panel1.Name = "panel1";
-            panel1.Size = new Size(991, 72);
-            panel1.TabIndex = 37;
+            panel1.Size = new Size(947, 121);
+            panel1.TabIndex = 42;
+            // 
+            // label11
+            // 
+            label11.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label11.AutoSize = true;
+            label11.Font = new Font("Trebuchet MS", 11.25F);
+            label11.ForeColor = SystemColors.ButtonFace;
+            label11.Location = new Point(531, 30);
+            label11.Name = "label11";
+            label11.Size = new Size(182, 24);
+            label11.TabIndex = 3;
+            label11.Text = "Тема: Паттерн MVC";
             // 
             // label10
             // 
@@ -344,7 +374,7 @@
             label10.AutoSize = true;
             label10.Font = new Font("Trebuchet MS", 11.25F);
             label10.ForeColor = SystemColors.ButtonFace;
-            label10.Location = new Point(522, 6);
+            label10.Location = new Point(1269, 6);
             label10.Name = "label10";
             label10.Size = new Size(182, 24);
             label10.TabIndex = 2;
@@ -356,7 +386,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Trebuchet MS", 11.25F);
             label2.ForeColor = SystemColors.ButtonFace;
-            label2.Location = new Point(1398, 11);
+            label2.Location = new Point(2145, 11);
             label2.Name = "label2";
             label2.Size = new Size(285, 24);
             label2.TabIndex = 1;
@@ -368,7 +398,7 @@
             label1.BackColor = SystemColors.Highlight;
             label1.Font = new Font("Trebuchet MS", 11.25F);
             label1.ForeColor = SystemColors.ButtonFace;
-            label1.Location = new Point(18, 3);
+            label1.Location = new Point(36, 30);
             label1.Name = "label1";
             label1.Size = new Size(318, 72);
             label1.TabIndex = 0;
@@ -380,23 +410,23 @@
             btnBack.BackColor = Color.White;
             btnBack.Font = new Font("Trebuchet MS", 9.75F);
             btnBack.ForeColor = Color.Black;
-            btnBack.Location = new Point(849, 545);
+            btnBack.Location = new Point(742, 577);
             btnBack.Name = "btnBack";
             btnBack.Size = new Size(122, 28);
-            btnBack.TabIndex = 44;
+            btnBack.TabIndex = 49;
             btnBack.Text = "Выход";
             btnBack.UseVisualStyleBackColor = true;
-            btnBack.Click += BtnBack;
+            btnBack.Click += btnBack_Click;
             // 
             // btnClear
             // 
             btnClear.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btnClear.Font = new Font("Trebuchet MS", 9.75F);
-            btnClear.Location = new Point(815, 421);
+            btnClear.Location = new Point(698, 458);
             btnClear.Margin = new Padding(3, 4, 3, 4);
             btnClear.Name = "btnClear";
             btnClear.Size = new Size(171, 28);
-            btnClear.TabIndex = 46;
+            btnClear.TabIndex = 50;
             btnClear.Text = "Очистить";
             btnClear.Click += btnClear_Click;
             // 
@@ -404,22 +434,23 @@
             // 
             btnShowInfo.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btnShowInfo.Font = new Font("Trebuchet MS", 9.75F);
-            btnShowInfo.Location = new Point(605, 421);
+            btnShowInfo.Location = new Point(488, 458);
             btnShowInfo.Margin = new Padding(3, 4, 3, 4);
             btnShowInfo.Name = "btnShowInfo";
             btnShowInfo.Size = new Size(171, 28);
-            btnShowInfo.TabIndex = 47;
+            btnShowInfo.TabIndex = 51;
             btnShowInfo.Text = "Показать данные";
+            btnShowInfo.Click += btnShowInfo_Click;
             // 
             // groupBoxDisplay
             // 
             groupBoxDisplay.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             groupBoxDisplay.Controls.Add(txtDisplayInfo);
             groupBoxDisplay.Font = new Font("Trebuchet MS", 9.75F);
-            groupBoxDisplay.Location = new Point(605, 100);
+            groupBoxDisplay.Location = new Point(488, 137);
             groupBoxDisplay.Name = "groupBoxDisplay";
             groupBoxDisplay.Size = new Size(379, 314);
-            groupBoxDisplay.TabIndex = 43;
+            groupBoxDisplay.TabIndex = 48;
             groupBoxDisplay.TabStop = false;
             groupBoxDisplay.Text = "Информация об интернет-магазине";
             // 
@@ -439,7 +470,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(996, 589);
+            ClientSize = new Size(879, 643);
             Controls.Add(btnBack);
             Controls.Add(btnClear);
             Controls.Add(btnShowInfo);
@@ -450,7 +481,7 @@
             Controls.Add(lblObjectCount);
             Controls.Add(panel1);
             Name = "Form1";
-            Text = "Интернет-магазины";
+            Text = "Form1";
             groupBoxObjects.ResumeLayout(false);
             groupBoxObjects.PerformLayout();
             groupBoxStatus.ResumeLayout(false);
@@ -467,6 +498,8 @@
             ResumeLayout(false);
             PerformLayout();
         }
+
+        #endregion
 
         private GroupBox groupBoxObjects;
         private Label lblCurrentObject;
@@ -495,6 +528,7 @@
         private Label label10;
         private Label label2;
         private Label label1;
+        private Label label11;
         private Button btnBack;
         private Button btnClear;
         private Button btnShowInfo;
