@@ -32,7 +32,8 @@ namespace MVC.Controller
         /// <param name="rating">Рейтинг (1-5)</param>
         /// <param name="isActive">Активен ли магазин</param>
         /// <returns>true, если магазин успешно создан; false, если ошибка валидации</returns>
-        public bool CreateShop(string name, string address, int purchases, int products, double avgCheck, double rating, bool isActive)
+        public bool CreateShop(string name, string address, int purchases, int products, 
+            double avgCheck, double rating, bool isActive)
         {
             if (!InputChecker.IsValidShopName(name))
             {
@@ -61,7 +62,6 @@ namespace MVC.Controller
                     BoxMessage.ErrorCode);
                 return false;
             }
-
             var newShop = new InternetShop(name, address, purchases, products, avgCheck, rating, isActive);
             _collection.Add(newShop);
             return true;
