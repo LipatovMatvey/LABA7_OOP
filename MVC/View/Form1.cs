@@ -42,7 +42,7 @@ namespace MVC
             cmbObjectsList.DataSource = null;
             cmbObjectsList.DataSource = _collection.GetAll();
             cmbObjectsList.DisplayMember = "Name";
-            lblObjectCount.Text = $"Создано объектов: {_collection.Count}";
+            lblObjectCount.Text = $"Создано объектов: {_collection.Count()}";
         }
 
         /// <summary>

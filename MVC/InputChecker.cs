@@ -5,17 +5,17 @@ using System.Text.RegularExpressions;
 
 namespace Laba3_oop
 {
-    internal abstract class InputChecker
+    public abstract class InputChecker
     {
         /// <summary>
         /// Регулярное выражение для проверки на корректность ввода имени магазина
         /// </summary>
-        private static readonly string _shopNamePattern = @"^(?!\d+$)(?!.*\s{2})[A-Za-zА-Яа-яЁё0-9&""' -]{2,40}$";
+        private static readonly string _shopNamePattern = @"^(?!\d+$)(?!.*\s{2})[A-Za-zА-Яа-яЁё0-9&""' -/]{2,40}$";
 
         /// <summary>
         /// Регулярное выражение для проверки на корректность ввода адреса
         /// </summary>
-        private static readonly string _addressPattern = @"^(?!\d+$)(?!.*\s{2})[A-Za-zА-Яа-яЁё0-9&""'., -]{2,40}$";
+        private static readonly string _addressPattern = @"^(?!\d+$)(?!.*\s{2})[A-Za-zА-Яа-яЁё0-9&""'., -/]{2,40}$";
 
         /// <summary>
         /// Проверяет корректность имени магазина
